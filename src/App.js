@@ -1,17 +1,18 @@
-// src/App.js
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Activities from './components/Activities';
+import ActivityPage from './components/ActivityPage';
 import './App.css';
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>OrbiApp Activities</h1>
-        <Activities />
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Activities />} />
+        <Route path="/activity/:slug" element={<ActivityPage />} />
+      </Routes>
+    </Router>
   );
 }
 

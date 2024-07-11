@@ -1,0 +1,151 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e0f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.App-header {
+  background-color: #00695c;
+  color: rgb(235, 26, 26);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.orbi-filter {
+  background-color: #e0f7fa;
+  padding: 10px;
+  border-bottom: 2px solid #00796b;
+}
+
+.orbi-filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.orbi-filter-header h4 {
+  margin: 0;
+}
+
+.orbi-filter .fa {
+  margin-left: 10px;
+}
+
+.location-filter {
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.filter-container {
+  background-color: white;
+  border: 1px solid #b2dfdb;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.filter-container label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-container input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+.tagged-posts {
+  padding: 20px;
+}
+
+.grid-item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.grid-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  width: 30%;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.full-content {
+  padding: 20px;
+}
+
+.icon {
+  background-color: #004d40;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.icon p {
+  margin: 5px 0;
+}
+
+.text h4 {
+  margin: 10px 0;
+}
+
+.text .icons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.text .icons span {
+  display: flex;
+  align-items: center;
+}
+
+.text .icons i {
+  margin-right: 5px;
+}
+
+.checkmark {
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.checkmark::after {
+  content: "";
+  display: none;
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+input:checked + .checkmark::after {
+  display: block;
+}
+
+input:checked + .checkmark {
+  background-color: #66bb6a;
+}
