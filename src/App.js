@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Activities />} />
-        <Route path="/activity/:slug" element={<ActivityPage />} />
+        <Route path="/activity/:slug" element={<ActivityPage />} /> 
       </Routes>
     </Router>
   );
