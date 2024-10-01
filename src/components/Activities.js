@@ -7,7 +7,9 @@ export default function Activities() {
   const [activitiesData, activitiesIsPending, activitiesError, doActivitiesRequest] = useRequest(`/departments/activities`);
 
   useEffect(() => {
-    const startOfJune2024 = 1715731200000;
+    console.log(Date.now());
+    //const startOfJune2024 = 1715731200000; //old
+    const startOfJune2024 = 1727765357589;
     doActivitiesRequest([`from=${startOfJune2024}`, 'interval=month']);
   }, []);
 
